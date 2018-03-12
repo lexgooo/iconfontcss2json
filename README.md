@@ -6,8 +6,8 @@
 yarn add lexgooo/iconfontcss2json
 ```  
 ## 快速使用（Quick start）  
-  - 先确保当前机子安装了nodejs环境。
-  - 新建一个js文件 css2json.js
+  - 先确保当前机子安装了nodejs环境。
+  - 新建一个js文件 css2json.js
   ```javascript  
   const css2json = require('iconfontcss2json')
   css2json.css2json('./iconfont.css', './iconfont.json')
