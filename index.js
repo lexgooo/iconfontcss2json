@@ -43,7 +43,7 @@ exports.css2json = (cssFile, jsonFile) => {
       if (err) {
         return console.error(err)
       }
-      console.log('写入成功！')
+      console.info(`写入成功，请前往${jsonFile}查看结果。`)
     })
   })
 }
