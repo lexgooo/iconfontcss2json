@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs');
 
 exports.css2json = (cssFile, jsonFile) => {
