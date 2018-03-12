@@ -36,13 +36,21 @@ exports.css2json = (cssFile, jsonFile) => {
       value = parseInt(value, 16)
       obj[key] = value
     })
+
+    // 把处理后的对象转换成字符串
     data = JSON.stringify(obj)
-    // data = obj
-    // console.log(data)
+
+    // 把转换的字符串写入一个新的文件中
     fs.writeFile(jsonFile, data, (err) => {
       if (err) {
         return console.error(err)
       }
+      fs.unlink(cssFile, (err) => {
+        if (err) {
+          console.log(err)
+        }
+        console.log(`已成功把${cssFile}删除！`)
+      })
       console.info(`写入成功，请前往${jsonFile}查看结果。`)
     })
   })
