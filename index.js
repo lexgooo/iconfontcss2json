@@ -1,6 +1,6 @@
 const fs = require('fs');
-// module.exports
-exports.css2json = function css2json (cssFile, jsonFile) {
+
+exports.css2json = (cssFile, jsonFile) => {
   fs.readFile(cssFile, (err, data) => {
     if (err) {
       return console.error(err)
